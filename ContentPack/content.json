@@ -1,0 +1,131 @@
+{
+    "Format": "2.3.0",
+    "ConfigSchema": {
+        // Config
+        "Enabled": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "Nightmare": {
+            "AllowValues": "true, false",
+            "Default": "false"
+        }
+    },
+    "Changes": [
+        // Strings
+        {
+            "LogName": "H2024: Strings",
+            "Action": "Load",
+            "Target": "Mods/blueberry/H2024/Strings",
+            "FromFile": "assets/blank.json"
+        },
+        {
+            "LogName": "H2024: Strings",
+            "Action": "EditData",
+            "Target": "Mods/blueberry/H2024/Strings",
+            "Entries": {
+                "1": "Skeleton Yard",
+                "2": "Ghoul's World",
+                "3": "Wizard's Manse",
+                "4": "Pumpkingdom",
+                "5": "Finale",
+                "Q": "Wake from your dream ..?",
+                "ID": "Custom_blueberry_H2024",
+                "NIGHTMARE": "{{Nightmare}}"
+            }
+        },
+        // Maps
+        {
+            "LogName": "H2024: Purple",
+            "Action": "Load",
+            "Target": "Maps/Custom_blueberry_H2024_1",
+            "FromFile": "assets/1.tmx"
+        },
+        {
+            "LogName": "H2024: Red",
+            "Action": "Load",
+            "Target": "Maps/Custom_blueberry_H2024_2",
+            "FromFile": "assets/2.tmx"
+        },
+        {
+            "LogName": "H2024: Blue",
+            "Action": "Load",
+            "Target": "Maps/Custom_blueberry_H2024_3",
+            "FromFile": "assets/3.tmx"
+        },
+        {
+            "LogName": "H2024: Orange",
+            "Action": "Load",
+            "Target": "Maps/Custom_blueberry_H2024_4",
+            "FromFile": "assets/4.tmx"
+        },
+        {
+            "LogName": "H2024: Finale",
+            "Action": "Load",
+            "Target": "Maps/Custom_blueberry_H2024_5",
+            "FromFile": "assets/5.tmx"
+        },
+        // Events
+        {
+            "LogName": "H2024: Events - Intros",
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                // /z spring/z summer
+                "Custom_blueberry_H2024_1/u 3 9 15 21": "spirits_eve/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_1/pause 500/spriteText 4 \"Are you lost?\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_1/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_1/switchEvent Custom_blueberry_H2024_1o/switchEvent Custom_blueberry_H2024_1x",
+                "Custom_blueberry_H2024_2/u 5 11 17 23/e Custom_blueberry_H2024_1o": "night_market/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_2/pause 500/spriteText 4 \"Sweet dreams..\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_2/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_2/switchEvent Custom_blueberry_H2024_2o/switchEvent Custom_blueberry_H2024_2x",
+                "Custom_blueberry_H2024_3/u 7 13 19 25/e Custom_blueberry_H2024_2o": "submarine_song/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_3/pause 500/spriteText 4 \"Your head must be swimming..\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_3/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_3/switchEvent Custom_blueberry_H2024_3o/switchEvent Custom_blueberry_H2024_3x",
+                "Custom_blueberry_H2024_4/u 9 15 21 27/e Custom_blueberry_H2024_3o": "wavy/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_4/pause 500/spriteText 4 \"Your final challenge...\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_4/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_4/switchEvent Custom_blueberry_H2024_4o/switchEvent Custom_blueberry_H2024_4x",
+                // any season
+                "Custom_blueberry_H2024_5/u 1 7 13 19 28/e Custom_blueberry_H2024_4o": "spirits_eve"
+            },
+            "When": {
+                "Enabled": "true"
+            }
+        },
+        {
+            "LogName": "H2024: Events - Outros",
+            "Action": "EditData",
+            "Target": "Data/Events/Temp",
+            "Entries": {
+                // Nice
+                "Custom_blueberry_H2024_1o": "eventSeen Custom_blueberry_H2024_1/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"You shall return...\"/{{OutroToEnd}}",
+                "Custom_blueberry_H2024_2o": "eventSeen Custom_blueberry_H2024_2/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"The waking world calls you...\"/{{OutroToEnd}}",
+                "Custom_blueberry_H2024_3o": "eventSeen Custom_blueberry_H2024_3/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"Worthy of the Maze...\"/{{OutroToEnd}}",
+                "Custom_blueberry_H2024_4o": "eventSeen Custom_blueberry_H2024_4/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"The rites are complete...\"/{{OutroToEnd}}",
+
+                // Naughty
+                "Custom_blueberry_H2024_1x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"In your dreams...\"/{{OutroToEnd}}",
+                "Custom_blueberry_H2024_2x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"Naughty, naughty...\"/{{OutroToEnd}}",
+                "Custom_blueberry_H2024_3x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"How predictable...\"/{{OutroToEnd}}",
+                "Custom_blueberry_H2024_4x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"A reward worthy of you...\"/{{OutroToEnd}}"
+            },
+            "When": {
+                "Enabled": "true"
+            }
+        }
+    ],
+    "DynamicTokens": [
+        // Snippets
+        {
+            "Name": "IntroToMaze",
+            "Value": "viewport player clamp true unfreeze/globalFadeToClear"
+        },
+        {
+            "Name": "MazeToOutro",
+            "Value": "globalFade/viewport -1000 -1000/pause 500"
+        },
+        {
+            "Name": "OutroToEnd",
+            "Value": "pause 500/playMusic none/spriteText 4 \"\"/end bed"
+        },
+        {
+            "Name": "NiceReward",
+            "Value": "addItem 373"
+        },
+        {
+            "Name": "NaughtyReward",
+            "Value": "playSound death/addItem 747"
+        }
+    ]
+}

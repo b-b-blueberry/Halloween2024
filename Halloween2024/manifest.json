@@ -1,0 +1,9 @@
+﻿{
+    "Name": "H2024: Halloween Puzzle Dreams",
+    "Author": "blueberry",
+    "Version": "1.0.0",
+    "Description": "...",
+    "UniqueID": "blueberry.H2024",
+    "UpdateKeys": [ "Nexus:????" ],
+    "EntryDll": "Halloween2024.dll"
+}

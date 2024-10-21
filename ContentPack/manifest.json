@@ -1,0 +1,16 @@
+﻿{
+    "Name": "H2024: Halloween Puzzle Dreams [CP]",
+    "Author": "blueberry",
+    "Version": "1.0.0",
+    "Description": "...",
+    "UniqueID": "blueberry.H2024.CP",
+    "UpdateKeys": [ "Nexus:????" ],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "blueberry.H2024"
+        }
+    ]
+}
