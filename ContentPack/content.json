@@ -24,13 +24,13 @@
             "Action": "EditData",
             "Target": "Mods/blueberry/H2024/Strings",
             "Entries": {
-                "1": "Skeleton Yard",
-                "2": "Ghoul's World",
-                "3": "Wizard's Manse",
-                "4": "Pumpkingdom",
-                "5": "Finale",
-                "Q": "Wake from your dream ..?",
-                "ID": "Custom_blueberry_H2024",
+                "1": "{{i18n:map.name.1}}",
+                "2": "{{i18n:map.name.2}}",
+                "3": "{{i18n:map.name.3}}",
+                "4": "{{i18n:map.name.4}}",
+                "5": "{{i18n:map.name.5}}",
+                "ID": "{{ID}}",
+                "QUIT": "{{Quit}}",
                 "NIGHTMARE": "{{Nightmare}}"
             }
         },
@@ -38,31 +38,31 @@
         {
             "LogName": "H2024: Purple",
             "Action": "Load",
-            "Target": "Maps/Custom_blueberry_H2024_1",
+            "Target": "Maps/{{ID}}_1",
             "FromFile": "assets/1.tmx"
         },
         {
             "LogName": "H2024: Red",
             "Action": "Load",
-            "Target": "Maps/Custom_blueberry_H2024_2",
+            "Target": "Maps/{{ID}}_2",
             "FromFile": "assets/2.tmx"
         },
         {
             "LogName": "H2024: Blue",
             "Action": "Load",
-            "Target": "Maps/Custom_blueberry_H2024_3",
+            "Target": "Maps/{{ID}}_3",
             "FromFile": "assets/3.tmx"
         },
         {
             "LogName": "H2024: Orange",
             "Action": "Load",
-            "Target": "Maps/Custom_blueberry_H2024_4",
+            "Target": "Maps/{{ID}}_4",
             "FromFile": "assets/4.tmx"
         },
         {
             "LogName": "H2024: Finale",
             "Action": "Load",
-            "Target": "Maps/Custom_blueberry_H2024_5",
+            "Target": "Maps/{{ID}}_5",
             "FromFile": "assets/5.tmx"
         },
         // Events
@@ -72,12 +72,12 @@
             "Target": "Data/Events/FarmHouse",
             "Entries": {
                 // /z spring/z summer
-                "Custom_blueberry_H2024_1/u 3 9 15 21": "spirits_eve/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_1/pause 500/spriteText 4 \"Are you lost?\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_1/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_1/switchEvent Custom_blueberry_H2024_1o/switchEvent Custom_blueberry_H2024_1x",
-                "Custom_blueberry_H2024_2/u 5 11 17 23/e Custom_blueberry_H2024_1o": "night_market/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_2/pause 500/spriteText 4 \"Sweet dreams..\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_2/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_2/switchEvent Custom_blueberry_H2024_2o/switchEvent Custom_blueberry_H2024_2x",
-                "Custom_blueberry_H2024_3/u 7 13 19 25/e Custom_blueberry_H2024_2o": "submarine_song/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_3/pause 500/spriteText 4 \"Your head must be swimming..\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_3/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_3/switchEvent Custom_blueberry_H2024_3o/switchEvent Custom_blueberry_H2024_3x",
-                "Custom_blueberry_H2024_4/u 9 15 21 27/e Custom_blueberry_H2024_3o": "wavy/-1000 -1000/farmer 1 1 2/eventSeen Custom_blueberry_H2024_4/pause 500/spriteText 4 \"Your final challenge...\"/spriteText 4 \"\"/changeToTemporaryMap Custom_blueberry_H2024_4/{{IntroToMaze}}/playerControl Custom_blueberry_H2024_4/switchEvent Custom_blueberry_H2024_4o/switchEvent Custom_blueberry_H2024_4x",
+                "{{ID}}_1/u 3 9 15 21": "spirits_eve/-1000 -1000/farmer 1 1 2/pause 500/spriteText 4 \"{{i18n:map.intro.1}}\"/spriteText 4 \"\"/changeToTemporaryMap {{ID}}_1/{{IntroToMaze}}/playerControl {{ID}}_1/switchEvent {{ID}}_1O/switchEvent {{ID}}_1X/switchEvent {{ID}}_1Q",
+                "{{ID}}_2/u 5 11 17 23/n {{ID}}_1": "night_market/-1000 -1000/farmer 1 1 2/pause 500/spriteText 4 \"{{i18n:map.intro.2}}\"/spriteText 4 \"\"/changeToTemporaryMap {{ID}}_2/{{IntroToMaze}}/playerControl {{ID}}_2/switchEvent {{ID}}_2O/switchEvent {{ID}}_2X/switchEvent {{ID}}_2Q",
+                "{{ID}}_3/u 7 13 19 25/n {{ID}}_2": "submarine_song/-1000 -1000/farmer 1 1 2/pause 500/spriteText 4 \"{{i18n:map.intro.3}}\"/spriteText 4 \"\"/changeToTemporaryMap {{ID}}_3/{{IntroToMaze}}/playerControl {{ID}}_3/switchEvent {{ID}}_3O/switchEvent {{ID}}_3X/switchEvent {{ID}}_3Q",
+                "{{ID}}_4/u 9 15 21 27/n {{ID}}_3": "wavy/-1000 -1000/farmer 1 1 2/pause 500/spriteText 4 \"{{i18n:map.intro.4}}\"/spriteText 4 \"\"/changeToTemporaryMap {{ID}}_4/{{IntroToMaze}}/playerControl {{ID}}_4/switchEvent {{ID}}_4O/switchEvent {{ID}}_4X/switchEvent {{ID}}_4Q"
                 // any season
-                "Custom_blueberry_H2024_5/u 1 7 13 19 28/e Custom_blueberry_H2024_4o": "spirits_eve"
+                // "{{ID}}_5/u 1 7 13 19 28/n {{ID}}_4": "spirits_eve"
             },
             "When": {
                 "Enabled": "true"
@@ -89,16 +89,22 @@
             "Target": "Data/Events/Temp",
             "Entries": {
                 // Nice
-                "Custom_blueberry_H2024_1o": "eventSeen Custom_blueberry_H2024_1/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"You shall return...\"/{{OutroToEnd}}",
-                "Custom_blueberry_H2024_2o": "eventSeen Custom_blueberry_H2024_2/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"The waking world calls you...\"/{{OutroToEnd}}",
-                "Custom_blueberry_H2024_3o": "eventSeen Custom_blueberry_H2024_3/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"Worthy of the Maze...\"/{{OutroToEnd}}",
-                "Custom_blueberry_H2024_4o": "eventSeen Custom_blueberry_H2024_4/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"The rites are complete...\"/{{OutroToEnd}}",
+                "{{ID}}_1O": "addMailReceived {{ID}}_1/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"{{i18n:map.success.1}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.success.1}}\"",
+                "{{ID}}_2O": "addMailReceived {{ID}}_2/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"{{i18n:map.success.2}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.success.2}}\"",
+                "{{ID}}_3O": "addMailReceived {{ID}}_3/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"{{i18n:map.success.3}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.success.3}}\"",
+                "{{ID}}_4O": "addMailReceived {{ID}}_4/{{MazeToOutro}}/{{NiceReward}}/spriteText 4 \"{{i18n:map.success.4}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.success.4}}\"",
 
                 // Naughty
-                "Custom_blueberry_H2024_1x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"In your dreams...\"/{{OutroToEnd}}",
-                "Custom_blueberry_H2024_2x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"Naughty, naughty...\"/{{OutroToEnd}}",
-                "Custom_blueberry_H2024_3x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"How predictable...\"/{{OutroToEnd}}",
-                "Custom_blueberry_H2024_4x": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"A reward worthy of you...\"/{{OutroToEnd}}"
+                "{{ID}}_1X": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"{{i18n:map.failed.1}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.failed.1}}\"",
+                "{{ID}}_2X": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"{{i18n:map.failed.2}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.failed.2}}\"",
+                "{{ID}}_3X": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"{{i18n:map.failed.3}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.failed.3}}\"",
+                "{{ID}}_4X": "{{MazeToOutro}}/{{NaughtyReward}}/spriteText 4 \"{{i18n:map.failed.4}}\"/{{OutroToEnd}}/end dialogue {{Speaker}} \"{{i18n:npc.failed.4}}\"",
+
+                // Quit
+                "{{ID}}_1Q": "{{MazeToOutro}}/spriteText 4 \"{{i18n:map.quit.1}}\"/{{OutroToEnd}}/end bed",
+                "{{ID}}_2Q": "{{MazeToOutro}}/spriteText 4 \"{{i18n:map.quit.2}}\"/{{OutroToEnd}}/end bed",
+                "{{ID}}_3Q": "{{MazeToOutro}}/spriteText 4 \"{{i18n:map.quit.3}}\"/{{OutroToEnd}}/end bed",
+                "{{ID}}_4Q": "{{MazeToOutro}}/spriteText 4 \"{{i18n:map.quit.4}}\"/{{OutroToEnd}}/end bed"
             },
             "When": {
                 "Enabled": "true"
@@ -106,6 +112,41 @@
         }
     ],
     "DynamicTokens": [
+        // Strings
+        {
+            "Name": "ID",
+            "Value": "Custom_blueberry_H2024"
+        },
+        {
+            "Name": "Quit",
+            "Value": "{{i18n:menu.quit}}"
+        },
+        {
+            "Name": "Quit",
+            "Value": "{{i18n:menu.quit.nightmare}}",
+            "When": {
+                "Nightmare": "true"
+            }
+        },
+        // Characters
+        {
+            "Name": "Speaker",
+            "Value": "{{Random: Abigail, Sam, Sebastian, Elliott, Alex, Shane, Harvey, Haley, Emily, Maru}}"
+        },
+        {
+            "Name": "Speaker",
+            "Value": "{{spouse}}",
+            "When": {
+                "HasValue:{{spouse}}": "true"
+            }
+        },
+        {
+            "Name": "Speaker",
+            "Value": "{{roommate}}",
+            "When": {
+                "HasValue:{{roommate}}": "true"
+            }
+        },
         // Snippets
         {
             "Name": "IntroToMaze",
@@ -117,7 +158,7 @@
         },
         {
             "Name": "OutroToEnd",
-            "Value": "pause 500/playMusic none/spriteText 4 \"\"/end bed"
+            "Value": "pause 500/playMusic none/spriteText 4 \"\""
         },
         {
             "Name": "NiceReward",

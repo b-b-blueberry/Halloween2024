@@ -1,0 +1,40 @@
+{
+	"menu.quit": "Wake from your dream ..?",
+	"menu.quit.nightmare": "Wake from this nightmare ..?",
+
+	"map.name.1": "Skeleton's Realm",
+	"map.name.2": "Ghoul's World",
+	"map.name.3": "Wizard's Manse",
+	"map.name.4": "Pumpkingdom",
+	"map.name.5": "Finale",
+
+	"map.intro.1": "Lost in your thoughts ..?",
+	"map.intro.2": "Sweet dreams..",
+	"map.intro.3": "Your head must be swimming..",
+	"map.intro.4": "Your final challenge...",
+
+	"map.success.1": "You shall return...",
+	"map.success.2": "The waking world calls you...",
+	"map.success.3": "Worthy of the Maze...",
+	"map.success.4": "The rites are complete...",
+
+	"map.failed.1": "In your dreams...",
+	"map.failed.2": "Naughty, naughty...",
+	"map.failed.3": "Disappointing...",
+	"map.failed.4": "A reward worthy of you...",
+
+	"map.quit.1": "We shall return... in time.",
+	"map.quit.2": "We will be back.. so too shall you...",
+	"map.quit.3": "We are patient spirits...",
+	"map.quit.4": "We will be waiting... in your dreams.",
+
+	"npc.success.1": "Have you been sleepwalking or something? You look bone-tired.$s",
+	"npc.success.2": "You look like you've seen a ghost, @. Or like, fifty ghosts.$s#$e#What d'you mean more than fifty?$s",
+	"npc.success.3": "Are you doing alright? You were mumbling something about 'the maze, the maze'..$s",
+	"npc.success.4": "Wow, you look awful today.$s#$b#Did you get any sleep last night?$s",
+
+	"npc.failed.1": "This puzzle activity book is just a bunch of scribbles.. do you even know how to do mazes?$s#$b#You're meant to stay INSIDE the lines.$s",
+	"npc.failed.2": "You stink today, @... like rotten fruit. What's up with that?$s",
+	"npc.failed.3": "Hey @, your pants are kinda.. wet.$s#$b#You dreamed you were swimming? Right...$s#$e#Aren't you going to change?$s",
+	"npc.failed.4": "You fell out of bed again last night ..? Wow.$s"
+}

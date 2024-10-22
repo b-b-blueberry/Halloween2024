@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="5" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="26" nextobjectid="54">
  <properties>
-  <property name="Music" value="communityCenter"/>
   <property name="Warp" value="0 1 BusStop 42 23"/>
  </properties>
  <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
